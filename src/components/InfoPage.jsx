@@ -11,7 +11,7 @@ const InfoPage = (props) => {
         axios.get('http://localhost:8000/api/products/'+id)
             .then(res=>setProduct(res.data.user))
             .catch(err=>console.log(err))
-    },[])
+    },[id])
     const updateNote = (id)=>{
       navigate("/update/products/"+id)
     }
